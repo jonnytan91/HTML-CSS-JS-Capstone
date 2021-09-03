@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+:root {
+	--dark-cornflower-blue: hsla(212, 93%, 28%, 1);
+	--dark-cornflower-blue2: hsla(212, 83%, 38%, 1);
+	--platinum: hsla(120, 2%, 92%, 1);
+	--honey-yellow: hsla(40, 93%, 57%, 1);
+	--vivid-burgundy: hsla(343, 88%, 36%, 1);
+	--vivid-burgundy2: hsla(343, 68%, 56%, 1);
+	--rich-black-fogra-39: hsla(0, 3%, 6%, 1);
+}
+@keyframes example {
+  from {background-color: red; 
+  	opacity:0;}
+  to {background-color: yellow; 
+  	opacity:1;}
+}
+*{ 
+	font-family: Jost;
+	font-size:16px;
+	color:var(--platinum);
+	
+}
+.blue {
+	background-color: var(--dark-cornflower-blue);
+	
+}
+.blue2 {
+	background-color: var(--dark-cornflower-blue2);
+	
+}
+.white {
+	background-color: var(--platinum);
+	
+}
+.yellow {
+	background-color: var(--honey-yellow);
+}
+.burgundy {
+	background-color: var(--vivid-burgundy);
+	
+}
+.burgundy2 {
+	background-color: var(--vivid-burgundy2);
+	
+}
+.black {
+	background-color: var(--rich-black-fogra-39);
+	
+}
+body{
+	background-color: var(--rich-black-fogra-39);
+	
+}
+img {
+	max-width:100%; 
+}
+p{
+	font-family:Lora;
+	
+}
+header { 
+	display:flex;
+	justify-content: space-between;
+	border-bottom:1px solid var(--platinum)
+	
+} 
+figure {
+	margin:none;
+}
+.logo {
+	width:50px;
+	margin:10px;
+	display:inline-flex;
+}
+.logo figcaption{
+	margin:10px;
+	font-weight:regular;
+	
+}
+nav {
+	display:inline-flex;
+	margin:auto 10px;
+	align-self:center;
+}
+nav a{
+	margin:auto 10px;
+}
+.hero {
+  //background-image: filter(url("../images/nikhil-mitra-98ulhatrhfQ-unsplash.jpg"),blur(20px)) ;
+  background-image: url("../images/nikhil-mitra-98ulhatrhfQ-unsplash.jpg") ;
+  background-size: 2440px;
+  background-position: center center;
+  background-attachment: fixed;
+	display:flex;
+	width:100%;
+	height:900px; 
+}
+.hero2 {
+  background-image: url("../images/pawel-czerwinski-RPMcxbm2zi4-unsplash.jpg");
+  background-size: 2440px;
+  background-position: center center;
+  background-attachment: fixed;
+	display:flex; 
+}
+.heroBox { 
+	margin:100px 100px;
+	max-height:500px;
+	max-width:500px;
+	padding:50px 25px;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	z-index:3; 
+}
+.heroBox h1 {
+	font-size:3rem;
+}
+.offer { 
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-evenly;
+	align-content:space-evenly; 
+	padding:30px;
+	
+}
+.item { 
+	max-width:300px;
+	padding:30px;
+	margin:20px;
+}
+.title {
+	width:100%;
+	text-align:center;
+	font-size:2rem;
+}
+.title h2{
+	font-size:3rem;
+	margin:10px 0;
+}
+.callout { 
+	margin:150px 50px;
+	text-align:center;
+}
+.callout h2 {
+	font-size:3rem;
+}
+.callout p {
+	font-size:1.75rem;
+}
+aside {
+	display:flex;
+	justify-content:space-between;
+}
+
+
+.animate {
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: 1; 
+	
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+  width:100%;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+.row {
+	display:inline-flex;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px; 
+  color: gray;
+  font-size: 35px;
+  cursor: pointer; 
+}
+
+
+
+
+@media only screen and (max-width: 1080px) {
+	.item {
+	max-width:900px;
+	font-size:1.15rem;
+		
+	}
+	.item h2{ 
+	font-size:2.15rem;
+		
+	}
+	.item p{ 
+	font-size:1.5rem;
+		
+	}
+	.heroBox {
+		max-width:100%;
+		width:100%;
+	}
+	.heroBox p {
+	font-size:1.5rem;
+}
+}
